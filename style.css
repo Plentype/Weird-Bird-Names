@@ -25,9 +25,6 @@
 
 #explanation-bar > div {
 	width: 35%;
-	font-size: 2rem;
-	text-align: justify;
-	text-justify: inter-word;
 }
 
 #explanation-bar > div > h1 {
@@ -71,16 +68,6 @@ article > div {
 	width: 40%;
 }
 
-article > div > h1 {
-	font-size: 3rem;
-}
-
-article > div > p {
-	text-align: justify;
-	text-justify: inter-word;
-	font-size: 2.5rem;
-}
-
 .scroll-animate {
 	animation: fadeIn 0.8s ease;
 	-webkit-animation: fadeIn 0.8s ease;
@@ -96,13 +83,15 @@ article > div > p {
 }
 
 @media screen and (max-width: 1199px) {
-	* {
-		font-size: 1rem;
+	article > img {
+		min-width: 250px;
 	}
 
 	article > div {
 		width: 100%;
 		margin-top: 50px;
+		text-align: center;
+		font-size: 0.6rem;
 	}
 
 	article {
@@ -113,16 +102,64 @@ article > div > p {
 	article:nth-of-type(even) > img {
 		order: -1;
 	}
+
+	#explanation-bar {
+		flex-direction: column;
+		padding: 0;
+		width: 100%;
+		margin-bottom: 35px;
+	}
+
+	#explanation-bar > img {
+		min-width: 80vw;
+		margin: 35px 0;
+	}
+
+	#explanation-bar > div {
+		width: 90%;
+		order: 1;
+		font-size: 2rem;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#explanation-bar > div {
+		width: 100%;
+	}
+
+	article > div {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	img {
 		width: 50%;
 	}
+
+	article > div {
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+	#explanation-bar {
+		font-size: 2rem;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+	article > div > h1 {
+		font-size: 3rem;
+	}
+
+	article > div > p {
+		font-size: 2.5rem;
+	}
 }
 
 img {
-	width: 100%;
+	width: 50%;
 	height: 100%;
 	object-fit: cover;
 }
